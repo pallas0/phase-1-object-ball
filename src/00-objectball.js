@@ -1,7 +1,7 @@
 
 
-const gameObject = {
-    home: {
+function gameObject() {
+    return {home: {
         teamName: "Brooklyn",
         colors: ["Black", "White"],
         players: {
@@ -113,6 +113,6 @@ const gameObject = {
             }
         }
     }
-}
+}}
 
-console.log(gameObject);
+console.log(gameObject());
