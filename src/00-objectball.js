@@ -116,3 +116,23 @@ function gameObject() {
 }}
 
 console.log(gameObject());
+
+function numPointsScored(playerInput) {
+    const newGameObj = gameObject();
+    for (const gameKey in newGameObj) {
+        debugger
+        const teamObj = newGameObj[gameKey]
+        for (const teamKey in teamObj) {
+            const playerObj = teamObj.players 
+            for (const playerKey in playerObj) {
+                if (playerKey === playerInput) {
+                   return playerObj[playerKey].points
+                }
+                
+            }
+        }
+    }
+
+
+}
+console.log(numPointsScored("Jeff Adrien"))
