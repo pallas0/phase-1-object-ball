@@ -115,7 +115,6 @@ function gameObject() {
     }
 }}
 
-console.log(gameObject());
 
 function numPointsScored(playerInput) {
     const newGameObj = gameObject();
@@ -135,4 +134,35 @@ function numPointsScored(playerInput) {
 
 
 }
-console.log(numPointsScored("Jeff Adrien"))
+
+function shoeSize(playerName) {
+    const newGameObj = gameObject();
+    for (const team in newGameObj) {
+        const teamObj = newGameObj[team]
+        for (const teamKey in teamObj) {
+            const playerObj = teamObj[teamKey]
+            for (const playerKey in playerObj) {
+                if (playerKey == playerName) {
+                    return playerObj[playerKey].shoe;
+                }
+            }
+        }
+    }
+}
+
+function teamColors(teamName) {
+    const newGameObj = gameObject();
+    for (const team in newGameObj) {
+        const teamObj = newGameObj[team]
+        for (const teamKey in teamObj) {
+            if (teamObj[teamKey] == teamName) {
+                return teamObj.colors
+            }
+        }
+    }
+}
+
+//[] vs '.' ?
+
+
+console.log(teamColors("Charlotte Hornets"));
