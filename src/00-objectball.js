@@ -162,7 +162,5 @@ function teamColors(teamName) {
     }
 }
 
-//[] vs '.' ?
-
 
 console.log(teamColors("Charlotte Hornets"));
